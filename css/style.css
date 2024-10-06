@@ -12,6 +12,7 @@ body {
   align-items: center;
 }
 
+/* width is based on calculator and the height is based on the objects put inside it  */
 .calculator {
   background-color: purple;
   width: 350px;
@@ -30,6 +31,7 @@ body {
   height: 70px;
 }
 
+/* The buttons are added to be 25% (except the 0 key) of this container and they will wrap. */
 #button__container {
   display: flex;
   flex-wrap: wrap;

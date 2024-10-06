@@ -1,3 +1,4 @@
+// the first string is the text that will show per button and any remaining will be viable for button presses to activate the associated button
 const controls = [
   ["Clear", "Backspace", "Delete"],
   ["+/-", "~"],
@@ -24,6 +25,7 @@ let buttonsArray = [];
 
 const btnBin = document.getElementById("button__container");
 
+// Create all buttons with their associated clicks and store them in the buttonsArray for later usage
 for (const group of controls) {
   let btn = document.createElement("button");
   btn.classList.add("button");
@@ -35,11 +37,13 @@ for (const group of controls) {
   buttonsArray.push([btn, group]);
 }
 
+// update the display after a button event
 function updateDisplay() {
   this.focus();
   // const input = this.textContent;
 }
 
+// listen for button presses everywhere on the webpage and click the associated button
 document.addEventListener("keydown", (event) => {
   console.log(event.key);
   for (const element of buttonsArray) {
